@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --dark: hsl(184, 100%, 22%);
+  --verydark: hsl(179, 100%, 13%);
+  --text: hsla(0, 0%, 100%, 0.75);
+  --bg: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+  --titles: 'Big Shoulders Display', cursive;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: var(--bg);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat (3, 1fr);
+  width: 80%;
+  margin: 30px 0px;
+}
+
+.card {
+  padding: 30px;
+  height: 450px;
+}
+
+.sedan {
+  background-color: var(--orange);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.suvs {
+  background-color: var(--dark);
+}
+
+.luxury {
+  background-color: var(--verydark);
+  border-radius: 0px 0px 10px 10px;
+}
+
+img {
+  margin: 30px 0px;
+}
+
+h2 {
+  font-family: var(--titles);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: var(--bg);
+  margin-bottom: 30px;
+}
+
+p {
+  color: var(--text);
+  font-size: 15px;
+}
+
+.link {
+  display: inline-block;
+  background-color: var(--bg);
+  text-decoration: none;
+  font-size: 1em;
+  text-align: center;
+  width: 55%;
+  padding: 13px;
+  border-radius: 30px;
+  margin-top: 60px;
+}
+
+.link-sedan {
+  color: var(--orange);
+  transition: .5s;
+}
+
+.link-sedan:hover {
+  color: var(--bg);
+  background-color: transparent;
+  border: 2px solid var(--bg);
+}
+
+.link-suvs {
+  color: var(--dark);
+  transition: .5s;
+}
+
+.link-suvs:hover {
+  color: var(--bg);
+  background-color: transparent;
+  border: 2px solid var(--bg);
+}
+
+.link-luxury {
+  color: var(--verydark);
+  transition: .5s;
+}
+
+.link-luxury:hover {
+  color: var(--bg);
+  background-color: transparent;
+  border: 2px solid var(--bg);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    margin: 30px 0px;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  .card {
+    height: 500px;
+    padding: 40px;
+  }
+  .sedan {
+    border-radius: 10px 0px 0px 10px;
+  }
+  .luxury {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .link {
+    width: 70%;
+    padding: 9px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    width: 90%;
+    margin: 30px 0px;
+  }
+  .link {
+    margin-top: 90px;
+    width: 57%;
+    padding: 12px;
+  }
+}
